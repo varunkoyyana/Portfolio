@@ -1,0 +1,208 @@
+:root {
+    --sap-primary-1: #3F5161;
+    --sap-primary-2: #427CAC;
+    --sap-gradient-top: #2C4E6C;
+    --sap-gradient-bottom: #9EC7D8;
+    --sap-text: #333333;
+    --sap-background: #FAFAFA;
+    --sap-tile-radius: 0.5rem;
+    --sap-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '72', '72-Light', Arial, sans-serif;
+    color: var(--sap-text);
+    background-color: var(--sap-background);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--sap-gradient-top), var(--sap-gradient-bottom));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.certification-badge {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--sap-tile-radius);
+    margin: 1rem 0;
+}
+
+.certification-badge img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* Skills Grid */
+.skills {
+    padding: 4rem 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.skill-tile {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--sap-tile-radius);
+    box-shadow: var(--sap-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-tile:hover {
+    transform: translateY(-5px);
+}
+
+/* Experience Timeline */
+.experience {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--sap-tile-radius);
+    background: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--sap-primary-2);
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--sap-tile-radius);
+}
+
+.submit-btn {
+    background: var(--sap-primary-2);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: var(--sap-tile-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--sap-primary-1);
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0077B5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--sap-tile-radius);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.linkedin-btn img {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--sap-primary-1);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+} 
